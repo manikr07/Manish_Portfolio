@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+        
+<style>
+    body {
+        background-color: rgb(22, 22, 110);
+        font-family: Arial, sans-serif;
+        color: wheat;
+    }
+    
+    .navi {
+        padding: 20px 00px 0px 900px ; /* Adjusted padding */
+        display: flex;
+         align-items: center;
+        height: 100px;
+    }
+
+    nav {
+        display: flex;
+        gap: 40px; /* Adds space between the buttons */
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+    
+    button {
+        background-color: rgb(37, 37, 159);
+        color: white;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: lightgreen;
+    }
+
+    .parent {
+        padding-left: 100px; 
+        padding-right: 170px; 
+    }
+    
+    .one, .two, .three, .four, .five {
+        border-radius: 50px;
+        padding-left: 80px;
+        margin-bottom: 50px;
+        width: 1200px;
+        border: 2px solid grey;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(50px); /* Initial position off screen */
+        transition: opacity 0.5s, transform 0.5s;
+    }
+    
+    .show {
+        opacity: 1; /* Show when class is added */
+        transform: translateY(0); /* Bring back to normal position */
+    }
+
+    .one { height: 190px; }
+    .two { height: 200px; }
+    .three, .four { height: 150px; }
+    .five { height: 180px; }
+    
+    h1 {
+        font-family: monospace;
+        margin-bottom: 10px;
+    }
+    
+    p1 {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: sans-serif;
+        display: block;
+    }
+    
+    .btn-box {
+        border-radius: 50px;
+        align-items: center;
+        text-align: center;
+        height: 40px;
+        width: 150px;
+        color: white;
+        background-color: rgb(34, 126, 232);
+        display: block;  
+        margin: 50px auto;  
+    }
+
+    .heads {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+
+    <div class="navi">
+        <nav>
+            <a href="./index.html"><button>Home</button></a>
+            <a href="./about.html"><button>About</button></a>
+            <a href="./service.html"><button>Service</button></a>
+            <a href="./Contact.html"><button>Contact</button></a>
+        </nav> 
+    </div>
+
+   <div class="heads">
+        <img src="https://www.learnaboutlogistics.com/wp-content/uploads/2016/07/photodune-6221194-customer-service-team-s-e1468394369939.jpg" alt="Customer Service Team">
+   </div>
+
+  <div class="parent">
+      <div class="one">
+          <h1><b><u>WEB DEVELOPMENT</u></b></h1>
+          <p1>Frontend: HTML, CSS, JavaScript<br></p1>
+          <p1>Backend: Java<br></p1>
+          <p1>Project: Online shopping Platforms<br></p1> 
+      </div>
+      
+      <div class="two">
+          <h1><b><u>Training and Workshops</u></b></h1>
+          <p1>Language: HTML, CSS, Java, JavaScript, SQL</p1><br>
+          <p1>Technology Training: Web development and programming</p1><br>
+          <p1>Presentation Skills: Communication and presentation</p1> 
+      </div>
+
+      <div class="three">
+          <h1><u>Academic Projects</u></h1>
+          <p1>University-Level Projects: <i>Ecommerce and other technical projects</i></p1>
+      </div>
+
+      <div class="four"> 
+          <h1><u>Awards and Recognition</u></h1>
+          <p1>University Chancellor Award: <i>Exceptional project work</i></p1> 
+      </div>
+
+      <div class="five"> 
+          <h1><u>Personal Development</u></h1>
+          <p1>Self-Management: Techniques for motivation and efficiency</p1><br>
+          <p1>Learning New Technologies: Staying updated with industry trends</p1>
+      </div>
+  </div>
+
+  <div class="btn-box">
+      <a style="font-size: 30px;" href="./index.html">Back</a>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+        const elements = document.querySelectorAll('.one, .two, .three, .four, .five');
+        
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('show');
+            }, index * 500); // 500ms delay between each element
+        });
+    });
+  </script>
+
+</body>
+</html>
